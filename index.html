@@ -10,7 +10,7 @@
 		<li v-for="name in names" v-text="name"></li>
 	</ul>
 	<input type="text" id="input">
-	<button id="button">Add</button>
+	<button v-on:click="addName">Add</button>
 </div>
 
 </body>
@@ -21,13 +21,11 @@
 		data: {
 			names:['Shobi', 'Aswin', 'Akshay', 'Shobish']
 		},
-		mounted(){
-			document.querySelector("#button").addEventListener('click', function(){
-				let name = document.querySelector('#input');
-				app.names.push(name.value)
-				name.value=''
-			})
-		} 
+		methods:{
+			addName(){
+				alert('Testing button click vue')	
+			}
+		}
 	})
 	
 	
