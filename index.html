@@ -20,13 +20,16 @@
 		el: '#root',
 		data: {
 			names:['Shobi', 'Aswin', 'Akshay', 'Shobish']
-		}
+		},
+		mounted(){
+			document.querySelector("#button").addEventListener('click', function(){
+				let name = document.querySelector('#input');
+				app.names.push(name.value)
+				name.value=''
+			})
+		} 
 	})
-	document.querySelector("#button").addEventListener('click', function(){
-		let name = document.querySelector('#input');
-		app.names.push(name.value)
-		name.value=''
-	})
+	
 	
 </script>
 </html>
