@@ -5,12 +5,20 @@
 	<script type="text/javascript" src="https://unpkg.com/vue"></script>
 </head>
 <body>
-<input type="text" id="input">
+<div id="root">
+	<input type="text" id="input" v-model="message">
+</div>
+
 </body>
 <script type="text/javascript">
 	var data={
-		message:"Hello World!"
+		message:"Hello World! Again"
 	}
-	document.querySelector("#input").value=data.message;
+
+	new Vue({
+		el: '#root',
+		data: data
+	})
+	
 </script>
 </html>
