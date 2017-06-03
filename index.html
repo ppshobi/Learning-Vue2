@@ -4,9 +4,14 @@
 	<title>Learning Vuejs</title>
 	<script type="text/javascript" src="https://unpkg.com/vue"></script>
 </head>
+<style type="text/css">
+	.color-red{
+		color: red;
+	}
+</style>
 <body>
 <div id="root">
-	<ul>
+	<ul :class="color_class">
 		<li v-for="name in names" v-text="name"></li>
 	</ul>
 	<input type="text" id="input" v-model="newName">
@@ -20,6 +25,7 @@
 		el: '#root',
 		data: {
 			title:"Title is set through Vue",
+			color_class:"color-red",
 			newName:'',
 			names:['Shobi', 'Aswin', 'Akshay', 'Shobish']
 		},
