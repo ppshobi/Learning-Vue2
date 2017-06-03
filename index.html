@@ -10,7 +10,7 @@
 		<li v-for="name in names" v-text="name"></li>
 	</ul>
 	<input type="text" id="input" v-model="newName">
-	<button v-on:click="addName">Add</button>
+	<button v-bind:title="title" v-on:click="addName">Add</button>
 </div>
 
 </body>
@@ -19,6 +19,7 @@
 	let app = new Vue({
 		el: '#root',
 		data: {
+			title:"Title is set through Vue",
 			newName:'',
 			names:['Shobi', 'Aswin', 'Akshay', 'Shobish']
 		},
