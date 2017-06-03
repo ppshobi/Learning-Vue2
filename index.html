@@ -10,7 +10,7 @@
 		<li v-for="name in names" v-text="name"></li>
 	</ul>
 	<input type="text" id="input" v-model="newName">
-	<button v-bind:title="title" v-on:click="addName">Add</button>
+	<button :title="title" v-on:click="addName">Add</button>
 </div>
 
 </body>
