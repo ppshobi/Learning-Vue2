@@ -6,7 +6,10 @@
 </head>
 <body>
 	<div id="root">
-		<h2> {{ reversedMessage }} </h2>
+		<h2> All Tasks </h2>
+		<ul>
+			<li v-for="task in tasks" v-if="task.completed" v-text="task.description"></li>
+		</ul>
 	</div>
 
 </body>
@@ -15,15 +18,20 @@
 		el:'#root',
 		data:{
 
-			message: "Hello World!"
+			tasks:[
+				{description: 'Goto Store', completed:true},
+				{description: 'Have Lunch', completed:false},
+				{description: 'Upload Suryakanthi Website', completed:false},
+				{description: 'Check Outlook Mail', completed:false},
+				{description: 'Renew Seedsandcrops Domain', completed:true},
+				{description: 'Have Tea', completed:false}
+			]
 		},
 		methods:{
 
 		},
 		computed:{
-			reversedMessage(){
-				return this.message.split('').reverse().join('')
-			}
+			
 		}
 	})
 </script>
