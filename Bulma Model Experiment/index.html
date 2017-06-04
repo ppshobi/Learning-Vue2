@@ -9,7 +9,11 @@
 </head>
 <body>
 	<div id="root" class="container">
-		<modal v-if="showModal" @close="closeModal"></modal>
+		<modal v-if="showModal" @close="closeModal">
+			<p>
+				Any Content goes here
+			</p>
+		</modal>
 		<button @click="showModalnow"> Show Modal</button>
 	</div>
 </body>
