@@ -26,3 +26,4 @@ Vue.component('message', {
 app = new Vue({
 	el:'#root'
 })
+
