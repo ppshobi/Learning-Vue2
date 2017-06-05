@@ -5,7 +5,7 @@ Vue.component('tabs', {
 		 	<div class="tabs">
 	  			<ul>
 	    			<li v-for="tab in tabs" :class="{ 'is-active': tab.selected }">
-	    				<a href="#"> {{ tab.name }} </a>
+	    				<a href="#" @click="selectTab(tab)"> {{ tab.name }} </a>
 	    			</li>
 	  			</ul>
 			</div>
@@ -22,6 +22,11 @@ Vue.component('tabs', {
 	},
 	created(){
 		this.tabs=this.$children;
+	},
+	methods:{
+		selectTab(){
+			alert("Selecting")
+		}
 	}
 
 })
