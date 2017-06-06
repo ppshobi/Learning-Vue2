@@ -13,5 +13,10 @@
 </script>
 
 <style>
+.box{
+	background:grey;
+	border:1px solid #c5c5c5;
+	padding: 10px;
+}
 	
 </style>
