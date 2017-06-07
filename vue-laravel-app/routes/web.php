@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::get('/skills', function () {
     return ['Laravel', 'PHP', 'Wordpress', 'HTML', 'Js'];
 });
+
+Route::resource('projects', 'ProjectsController');
