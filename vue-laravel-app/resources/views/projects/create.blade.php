@@ -19,15 +19,16 @@
         <div id="root" class="container">
            @include('projects.list')
 
-           <form method="POST" action="/projects">
+           <form method="POST" action="/projects" @submit.prevent="onSubmit">
            		<div class="control">
            			<label for="name" class="label"> Project Name</label>
-           			<input type="text" name="name" id="name" class="input">
+           			<input type="text" name="name" id="name" class="input" v-model="name">
            		</div>
            		<div class="control">
            			<label for="description" class="label"> Project Description</label>
-           			<input type="text" name="description" id="description" class="input">
+           			<input type="text" name="description" id="description" class="input" v-model="description">
            		</div>
+           		<br/>
            		<div class="control">
            			<button class="is-primary button">Create</button>
            		</div>

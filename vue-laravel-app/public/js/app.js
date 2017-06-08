@@ -2,9 +2,12 @@
 const app = new Vue({
     el: '#root',
     data:{
-    	skills:[]
+    	name:'',
+    	description:''
     },
-    created(){
-    	axios.get('/skills').then(response => this.skills = response.data);
+    methods:{
+    	onSubmit(){
+    		alert("form Submitted")
+    	}
     }
 });
