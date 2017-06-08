@@ -7,7 +7,7 @@ const app = new Vue({
     },
     methods:{
     	onSubmit(){
-    		alert("form Submitted")
+    		axios.post('/projects',{name: this.name, description: this.description});
     	}
     }
 });
