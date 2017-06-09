@@ -3,11 +3,14 @@ const app = new Vue({
     el: '#root',
     data:{
     	name:'',
-    	description:''
+    	description:'',
+    	errors:{}
     },
     methods:{
     	onSubmit(){
-    		axios.post('/projects',{name: this.name, description: this.description});
+    		axios.post('/projects',this.$data)
+    		.then(response => alert("Success"))
+    		.catch(error => this.errors = error.response.data)
     	}
     }
 });
