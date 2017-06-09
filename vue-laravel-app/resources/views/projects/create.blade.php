@@ -19,7 +19,7 @@
         <div id="root" class="container">
            @include('projects.list')
 
-           <form method="POST" action="/projects" @submit.prevent="onSubmit">
+           <form method="POST" action="/projects" @submit.prevent="onSubmit" @keyDown="errors.clear($event.target.name)">
            		<div class="control">
            			<label for="name" class="label"> Project Name</label>
            			<input type="text" name="name" id="name" class="input" v-model="name">

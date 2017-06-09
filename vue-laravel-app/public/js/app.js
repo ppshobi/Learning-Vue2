@@ -14,6 +14,10 @@ class Error{
 	record(errors){
 		this.errors = errors;
 	}
+
+	clear(field){
+		delete this.errors[field]
+	}
 }
 
 const app = new Vue({
