@@ -11,6 +11,10 @@ class Error{
 		}
 	}
 
+	has(field){
+		return this.errors.hasOwnProperty(field)
+	}
+
 	record(errors){
 		this.errors = errors;
 	}
