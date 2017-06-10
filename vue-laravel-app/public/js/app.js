@@ -38,8 +38,12 @@ const app = new Vue({
     methods:{
     	onSubmit(){
     		axios.post('/projects',this.$data)
-    		.then(response => alert("Success"))
+    		.then(this.onSuccess)
     		.catch(error => this.errors.record(error.response.data))
+    	},
+    	onSuccess(response){
+    		alert(response.data.message)
+    		form.reset();
     	}
     }
 });
