@@ -15,6 +15,10 @@ class Error{
 		return this.errors.hasOwnProperty(field)
 	}
 
+	errorPresent(){
+		return Object.keys(this.errors).length > 0
+	}
+
 	record(errors){
 		this.errors = errors;
 	}

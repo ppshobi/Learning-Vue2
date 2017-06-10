@@ -32,7 +32,7 @@
            		</div>
            		<br/>
            		<div class="control">
-           			<button class="is-primary button">Create</button>
+           			<button class="is-primary button" :disabled="errors.errorPresent()">Create</button>
            		</div>
            </form>
         </div>
